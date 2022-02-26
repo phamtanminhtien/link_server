@@ -24,8 +24,6 @@ app.use(
 
 app.use(express.json());
 
-app.use("", express.static(path.join(__dirname, "client")));
-
 app.use("/api/link", link);
 app.get("/:id", async (req, res) => {
   const { id } = req.params;
